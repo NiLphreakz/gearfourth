@@ -261,7 +261,7 @@ cat> /usr/local/etc/xray/none.json << END
   },
   "inbounds": [
     {
-            "port": 8442,
+            "port": 8443,
             "protocol": "vmess",
             "settings": {
             "clients": [
@@ -293,7 +293,7 @@ cat> /usr/local/etc/xray/none.json << END
             }
         },
         {
-            "port": 8443,
+            "port": 8442,
             "protocol": "vless",
             "settings": {
             "clients": [
