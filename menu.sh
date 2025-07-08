@@ -14,7 +14,10 @@ swap=$( free -m | awk 'NR==4 {print $2}' )
 clear
 # OS Uptime
 uptime="$(uptime -p | cut -d " " -f 2-10)"
-
+# Getting CPU Information
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
+cpu_usage+=" %"
 # CERTIFICATE STATUS
 d1=$(date -d "$valid" +%s)
 d2=$(date -d "$today" +%s)
